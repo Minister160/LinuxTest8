@@ -142,7 +142,7 @@ mk_random_origin() {                               #产生随机点和随机数
 mk_random() {                               #产生随机点和随机数
     xrand=$((RANDOM%(Lines-3)+2));
     yrand=$((RANDOM%(Cols-2)+2));
-    foodscore=$((RANDOM%9+200));
+    foodscore=$((RANDOM%9+200));           #此处改动+1为+200可实现分数高于200
 
     echo -ne "\033[$xrand;${yrand}H$foodscore";
     liveflag=0;
